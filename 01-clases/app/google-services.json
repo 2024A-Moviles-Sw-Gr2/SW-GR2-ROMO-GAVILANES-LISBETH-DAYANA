@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "941314719897",
+    "project_id": "ldrg-2024a-sw-gr2",
+    "storage_bucket": "ldrg-2024a-sw-gr2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941314719897:android:755dc402524a7cbd757808",
+        "android_client_info": {
+          "package_name": "com.example.a2024aswgr2ldrg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNDtkH0IDj3EPgVPIYLpYlb3llh-t3ulQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
