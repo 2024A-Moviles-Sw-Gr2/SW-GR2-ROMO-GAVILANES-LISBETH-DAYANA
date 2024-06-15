@@ -1,6 +1,7 @@
 package com.example.a2024aswgr2ldrg
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -61,5 +62,26 @@ class ACicloVida : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         mostrarSnackbar("OnDestroy")
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+       outState
+           .run{
+               // Guardar las primitivas
+               putString("variableTextoGuardado", textoGlobal)
+           }
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(
+        savedInstanceState: Bundle
+    ) {
+        super.onRestoreInstanceState(savedInstanceState)
+        // Recuperar la variable
+        val textoRecuperadoDeVariable: String? = savedInstanceState.getString("variableTextoGuardado")
+        if(textoRecuperadoDeVariable != null){
+            mostrarSnackbar(textoRecuperadoDeVariable)
+            textoGlobal = textoRecuperadoDeVariable
+        }
     }
 }

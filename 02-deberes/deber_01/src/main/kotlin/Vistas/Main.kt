@@ -1,49 +1,49 @@
-// Deber 01 - Lisbeth Romo
 package Vistas
 
 import Controlador.Operaciones
-import Controlador.EscritorArchivos
+import Controlador.EscritorYLectorArchivos
 import java.lang.NumberFormatException
-import java.util.Date
 
-fun main(){
-
-    val escritorArchivos = EscritorArchivos("cuentas.txt")
+fun main() {
+    val escritorArchivos = EscritorYLectorArchivos("cuentas.txt")
     val operaciones = Operaciones(escritorArchivos)
 
     var opcion: Int
 
-    do{
+    do {
         println("\n***********Menu***********")
         println("1. Crear una cuenta de youtube")
         println("2. Mostrar cuentas")
         println("3. Actualizar una cuenta")
         println("4. Eliminar una cuenta")
         println("5. Subir video en la cuenta")
-        println("6. Salir")
+        println("6. Actualizar un video")
+        println("7. Eliminar un video")
+        println("8. Salir")
         print("Ingrese una opción: ")
 
-        try{
-            opcion = readLine()?.toInt() ?:0
+        try {
+            opcion = readLine()?.toInt() ?: 0
 
-            when (opcion){
+            when (opcion) {
                 1 -> {
                     println("\n***********Crear una cuenta***********")
                     print("Nombre del canal: ")
                     val nombre = readLine() ?: ""
+                    print("Descripción del canal: ")
+                    val descripcion = readLine() ?: ""
                     print("Número de suscriptores: ")
                     val numeroSuscriptores = readLine()?.toIntOrNull() ?: 0
                     print("¿Esta verificado? (Si/No): ")
                     val estaVerificadoEntrada = readLine()?.toLowerCase()
-                    val estaVerificado = when (estaVerificadoEntrada){
-                        "si" -> true
-                        "no" -> false
+                    val estaVerificado = when (estaVerificadoEntrada) {
+                        "si", "Si", "SI" -> true
+                        "no", "No", "NO" -> false
                         else -> false
                     }
-                    val fechaCreacion = Date()
                     print("Correo electrónico: ")
                     val correo = readLine() ?: ""
-                    operaciones.crearCuenta(nombre, numeroSuscriptores, estaVerificado, fechaCreacion, correo)
+                    operaciones.crearCuenta(nombre, descripcion, numeroSuscriptores, estaVerificado, correo)
                 }
                 2 -> {
                     println("\n***********Mostrar cuentas***********")
@@ -76,20 +76,41 @@ fun main(){
                     print("ID de la cuenta al que desea subir un video: ")
                     val idCuenta = readLine()?.toIntOrNull() ?: 0
                     operaciones.subirVideoACuenta(idCuenta)
-
                 }
                 6 -> {
-                    println("\nSaliendo...")
+                    println("\n***********Actualizar un video de la cuenta***********")
+                    println("Lista de cuentas")
+                    operaciones.mostrarCuentaID()
+
+                    print("ID de la cuenta del video a actualizar: ")
+                    val idCuenta = readLine()?.toIntOrNull() ?: 0
+                    operaciones.mostrarVideosDeCuenta(idCuenta)
+                    print("ID del video a actualizar: ")
+                    val idVideo = readLine()?.toIntOrNull() ?: 0
+                    operaciones.actualizarVideoEnCuenta(idCuenta, idVideo)
+                }
+                7 -> {
+                    println("\n***********Eliminar un video de la cuenta***********")
+                    println("Lista de cuentas")
+                    operaciones.mostrarCuentaID()
+
+                    print("ID de la cuenta del video a eliminar: ")
+                    val idCuenta = readLine()?.toIntOrNull() ?: 0
+                    operaciones.mostrarVideosDeCuenta(idCuenta)
+                    print("ID del video a eliminar: ")
+                    val idVideo = readLine()?.toIntOrNull() ?: 0
+                    operaciones.eliminarVideoEnCuenta(idCuenta, idVideo)
+                }
+                8 -> {
+                    println("\nSaliendo")
                 }
                 else -> {
                     println("\nOpcion inválida. Ingrese otro número")
                 }
             }
-        }catch (ex: NumberFormatException){
+        } catch (ex: NumberFormatException) {
             println("Error: Ingresa un Número Valido")
             opcion = 0
         }
-
-    }while(opcion != 6)
-
+    } while (opcion != 8)
 }

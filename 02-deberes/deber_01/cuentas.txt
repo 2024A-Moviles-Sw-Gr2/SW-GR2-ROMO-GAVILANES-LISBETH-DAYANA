@@ -1,0 +1,13 @@
+Cuenta de youtube
+ID Cuenta: 1
+Nombre del canal: Prueba 1
+Descripción: Canal de prueba 1
+Número de suscriptores: 12
+Esta verificada: Si
+Correo electrónico: prueba1@gmail.com
+  - ID Video: 1
+    Titulo: Video 1
+    Duración: 0.0
+    Número de vistas: 21
+    Fecha cuando fue subido: Sat Jun 15 16:50:51 ECT 2024
+    Número de me gustas: 45
