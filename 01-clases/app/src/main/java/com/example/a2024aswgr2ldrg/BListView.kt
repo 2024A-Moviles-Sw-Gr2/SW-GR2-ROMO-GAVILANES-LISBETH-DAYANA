@@ -1,5 +1,6 @@
 package com.example.a2024aswgr2ldrg
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.ContextMenu
@@ -10,6 +11,7 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -59,19 +61,50 @@ class BListView : AppCompatActivity() {
         return when (item.itemId) {
             R.id.mi_editar -> {
                 mostrarSnackbar(
-                    "Editar $posicionItemSeleccionado")
+                    "Editar $posicionItemSeleccionado"
+                )
                 return true
             }
+
             R.id.mi_eliminar -> {
                 mostrarSnackbar("Eliminar $posicionItemSeleccionado")
                 abrirDialogo() // Nueva linea
                 return true
             }
+
             else -> super.onContextItemSelected(item)
         }
     }
 
-    fun abrirDialogo(){}
+    fun abrirDialogo() {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("Desea Eliminar?")
+        builder.setPositiveButton(
+            "Aceptar",
+            DialogInterface.OnClickListener { dialog, which ->
+                mostrarSnackbar("Acepto $which")
+            }
+        )
+        builder.setNegativeButton("Cancelar", null)
+        val opciones = resources.getStringArray(
+            R.array.string_array_opciones
+        )
+        val seleccionPrevia = booleanArrayOf(
+            true, // Lunes
+            false, // Martes
+            false // Miercoles
+        )
+
+        builder.setMultiChoiceItems(
+            opciones,
+            seleccionPrevia,
+            { dialog, which, isChecked ->
+                mostrarSnackbar("Item: $which")
+            }
+        )
+        val dialogo = builder.create()
+        dialogo.show()
+    }
 
     fun anadirEntrenador(
         adaptador: ArrayAdapter<BEntrenador>
@@ -84,7 +117,7 @@ class BListView : AppCompatActivity() {
 
     fun mostrarSnackbar(texto: String) {
         val snack = Snackbar.make(
-            findViewById(R.id.cl_ciclo_vida),
+            findViewById(R.id.cl_blist_view),
             texto,
             Snackbar.LENGTH_INDEFINITE
         )
