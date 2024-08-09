@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.EditarCuentaActivity">
+
+    <TextView
+        android:id="@+id/txt_Editar_Cuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Editar Cuenta"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Regresar_Editar_Cuenta"
+        android:layout_width="150dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#F44336"
+        android:text="Regresar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Actualizar_Cuenta"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <Button
+        android:id="@+id/btn_Actualizar_Cuenta"
+        android:layout_width="150dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="108dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Actualizar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_Verificada_Cuenta2"
+        app:layout_constraintVertical_bias="0.608" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Completa los Datos"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Editar_Cuenta" />
+
+    <Switch
+        android:id="@+id/sw_Verificada_Cuenta2"
+        android:layout_width="173dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="100dp"
+        android:checked="false"
+        android:text="¿Está Verificada?"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_Editar_Suscriptores_Cuenta" />
+
+    <EditText
+        android:id="@+id/input_Editar_Suscriptores_Cuenta"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Número de Suscriptores"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_Editar_Descripcion_Cuenta" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_Editar_Descripcion_Cuenta"
+        android:layout_width="295dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Descripción"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_Editar_Nombre_Cuenta" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_Editar_Correo_Cuenta"
+        android:layout_width="295dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Correo Electrónico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_Editar_Suscriptores_Cuenta" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_Editar_Nombre_Cuenta"
+        android:layout_width="295dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="144dp"
+        android:hint="Nombre de la Cuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

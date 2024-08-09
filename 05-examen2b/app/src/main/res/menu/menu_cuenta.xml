@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mi_VerVideos"
+        android:title="Ver Videos" />
+    <item
+        android:id="@+id/mi_EditarCuenta"
+        android:title="Editar Cuenta" />
+    <item
+        android:id="@+id/mi_EliminarCuenta"
+        android:title="Eliminar Cuenta" />
+</menu>

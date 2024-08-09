@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.EditarVideoActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_Editar_Nombre_Video"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:hint="Título del Video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Completar_Datos" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_Editar_Duracion_Video"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Duración del Video (min)"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_Editar_Nombre_Video" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_Editar_Vistas_Video"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Número de Vistas"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_Editar_Duracion_Video" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_Editar_Likes_Video"
+        android:layout_width="295dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:hint="Número de Likes"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_Editar_Vistas_Video" />
+
+    <TextView
+        android:id="@+id/txt_Completar_Datos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Completa los Datos"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Editar_Video" />
+
+    <Button
+        android:id="@+id/btn_Actualizar_Video"
+        android:layout_width="150dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Actualizar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/input_Editar_Likes_Video"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/input_Editar_Likes_Video"
+        app:layout_constraintTop_toBottomOf="@+id/input_Editar_Likes_Video"
+        app:layout_constraintVertical_bias="0.608" />
+
+    <Button
+        android:id="@+id/btn_Regresar_Listado_Videos_Editar"
+        android:layout_width="150dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#F44336"
+        android:text="Regresar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Actualizar_Video"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <TextView
+        android:id="@+id/txt_Editar_Video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Editar Video"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

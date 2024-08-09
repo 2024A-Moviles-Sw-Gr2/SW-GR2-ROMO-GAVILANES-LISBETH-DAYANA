@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_item_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Principal" />
+    <item
+        android:id="@+id/id_item_samples"
+        android:icon="@drawable/_058784_double_arrow_right_icon"
+        android:title="Samples" />
+    <item
+        android:id="@+id/id_item_search"
+        android:icon="@drawable/_044492_explore_icon"
+        android:title="Explorar" />
+    <item
+        android:id="@+id/id_item_library"
+        android:icon="@drawable/_550615_music_audio_multimedia_note_song_icon"
+        android:title="Biblioteca" />
+</menu>
