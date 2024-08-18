@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_background"
+    android:padding="8dp">
+
+    <!-- Image of the Cancha -->
+
+    <!-- Cancha Name -->
+
+    <!-- Cancha Location -->
+    <ImageView
+        android:id="@+id/imageViewCancha"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cancha1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.204" />
+
+    <TextView
+        android:id="@+id/textViewCanchaName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Cancha “Álex Aguinaga”"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/imageViewCancha"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCanchaLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_location"
+        android:drawablePadding="4dp"
+        android:text="La Carolina"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/textViewCanchaName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/textViewCanchaName"
+        app:layout_constraintTop_toBottomOf="@id/textViewCanchaName" />
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/textViewReservationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha:"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/imageViewCancha"
+        app:layout_constraintTop_toBottomOf="@id/imageViewCancha" />
+
+    <!-- Time -->
+    <TextView
+        android:id="@+id/textViewReservationTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora: "
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/textViewReservationDate"
+        app:layout_constraintTop_toBottomOf="@id/textViewReservationDate" />
+
+    <TextView
+        android:id="@+id/textViewFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCanchaLocation"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toEndOf="@+id/textViewReservationDate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCanchaLocation"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <TextView
+        android:id="@+id/textViewHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/textViewCanchaLocation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textViewReservationTime"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFecha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

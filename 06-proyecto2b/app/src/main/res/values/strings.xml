@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">proyecto2b</string>
+    <!-- String for the increase button content description -->
+    <string name="increase">Increase</string>
+
+    <!-- String for the decrease button content description -->
+    <string name="decrease">Decrease</string>
+</resources>
